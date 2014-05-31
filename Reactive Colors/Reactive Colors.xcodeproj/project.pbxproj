@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C131F85F193A85AD00DE87FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F85E193A85AD00DE87FE /* Foundation.framework */; };
+		C131F861193A85AD00DE87FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F860193A85AD00DE87FE /* CoreGraphics.framework */; };
+		C131F863193A85AD00DE87FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F862193A85AD00DE87FE /* UIKit.framework */; };
+		C131F869193A85AD00DE87FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C131F867193A85AD00DE87FE /* InfoPlist.strings */; };
+		C131F86B193A85AD00DE87FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F86A193A85AD00DE87FE /* main.m */; };
+		C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */; };
+		C131F872193A85AD00DE87FE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C131F870193A85AD00DE87FE /* Main_iPhone.storyboard */; };
+		C131F875193A85AD00DE87FE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C131F873193A85AD00DE87FE /* Main_iPad.storyboard */; };
+		C131F878193A85AD00DE87FE /* RXCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F877193A85AD00DE87FE /* RXCViewController.m */; };
+		C131F87A193A85AD00DE87FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C131F879193A85AD00DE87FE /* Images.xcassets */; };
+		C131F881193A85AD00DE87FE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F880193A85AD00DE87FE /* XCTest.framework */; };
+		C131F882193A85AD00DE87FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F85E193A85AD00DE87FE /* Foundation.framework */; };
+		C131F883193A85AD00DE87FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F862193A85AD00DE87FE /* UIKit.framework */; };
+		C131F88B193A85AD00DE87FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C131F889193A85AD00DE87FE /* InfoPlist.strings */; };
+		C131F88D193A85AD00DE87FE /* Reactive_ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C131F884193A85AD00DE87FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C131F853193A85AD00DE87FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C131F85A193A85AD00DE87FE;
+			remoteInfo = "Reactive Colors";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C131F85B193A85AD00DE87FE /* Reactive Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C131F85E193A85AD00DE87FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C131F860193A85AD00DE87FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C131F862193A85AD00DE87FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C131F866193A85AD00DE87FE /* Reactive Colors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive Colors-Info.plist"; sourceTree = "<group>"; };
+		C131F868193A85AD00DE87FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C131F86A193A85AD00DE87FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C131F86C193A85AD00DE87FE /* Reactive Colors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reactive Colors-Prefix.pch"; sourceTree = "<group>"; };
+		C131F86D193A85AD00DE87FE /* RXCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCAppDelegate.h; sourceTree = "<group>"; };
+		C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCAppDelegate.m; sourceTree = "<group>"; };
+		C131F871193A85AD00DE87FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C131F874193A85AD00DE87FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C131F876193A85AD00DE87FE /* RXCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCViewController.h; sourceTree = "<group>"; };
+		C131F877193A85AD00DE87FE /* RXCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCViewController.m; sourceTree = "<group>"; };
+		C131F879193A85AD00DE87FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C131F87F193A85AD00DE87FE /* Reactive ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reactive ColorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C131F880193A85AD00DE87FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C131F888193A85AD00DE87FE /* Reactive ColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive ColorsTests-Info.plist"; sourceTree = "<group>"; };
+		C131F88A193A85AD00DE87FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reactive_ColorsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C131F858193A85AD00DE87FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C131F861193A85AD00DE87FE /* CoreGraphics.framework in Frameworks */,
+				C131F863193A85AD00DE87FE /* UIKit.framework in Frameworks */,
+				C131F85F193A85AD00DE87FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C131F87C193A85AD00DE87FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C131F881193A85AD00DE87FE /* XCTest.framework in Frameworks */,
+				C131F883193A85AD00DE87FE /* UIKit.framework in Frameworks */,
+				C131F882193A85AD00DE87FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C131F852193A85AD00DE87FE = {
+			isa = PBXGroup;
+			children = (
+				C131F864193A85AD00DE87FE /* Reactive Colors */,
+				C131F886193A85AD00DE87FE /* Reactive ColorsTests */,
+				C131F85D193A85AD00DE87FE /* Frameworks */,
+				C131F85C193A85AD00DE87FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C131F85C193A85AD00DE87FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C131F85B193A85AD00DE87FE /* Reactive Colors.app */,
+				C131F87F193A85AD00DE87FE /* Reactive ColorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C131F85D193A85AD00DE87FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C131F85E193A85AD00DE87FE /* Foundation.framework */,
+				C131F860193A85AD00DE87FE /* CoreGraphics.framework */,
+				C131F862193A85AD00DE87FE /* UIKit.framework */,
+				C131F880193A85AD00DE87FE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C131F864193A85AD00DE87FE /* Reactive Colors */ = {
+			isa = PBXGroup;
+			children = (
+				C131F86D193A85AD00DE87FE /* RXCAppDelegate.h */,
+				C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */,
+				C131F870193A85AD00DE87FE /* Main_iPhone.storyboard */,
+				C131F873193A85AD00DE87FE /* Main_iPad.storyboard */,
+				C131F876193A85AD00DE87FE /* RXCViewController.h */,
+				C131F877193A85AD00DE87FE /* RXCViewController.m */,
+				C131F879193A85AD00DE87FE /* Images.xcassets */,
+				C131F865193A85AD00DE87FE /* Supporting Files */,
+			);
+			path = "Reactive Colors";
+			sourceTree = "<group>";
+		};
+		C131F865193A85AD00DE87FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C131F866193A85AD00DE87FE /* Reactive Colors-Info.plist */,
+				C131F867193A85AD00DE87FE /* InfoPlist.strings */,
+				C131F86A193A85AD00DE87FE /* main.m */,
+				C131F86C193A85AD00DE87FE /* Reactive Colors-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C131F886193A85AD00DE87FE /* Reactive ColorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */,
+				C131F887193A85AD00DE87FE /* Supporting Files */,
+			);
+			path = "Reactive ColorsTests";
+			sourceTree = "<group>";
+		};
+		C131F887193A85AD00DE87FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C131F888193A85AD00DE87FE /* Reactive ColorsTests-Info.plist */,
+				C131F889193A85AD00DE87FE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C131F85A193A85AD00DE87FE /* Reactive Colors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C131F890193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive Colors" */;
+			buildPhases = (
+				C131F857193A85AD00DE87FE /* Sources */,
+				C131F858193A85AD00DE87FE /* Frameworks */,
+				C131F859193A85AD00DE87FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reactive Colors";
+			productName = "Reactive Colors";
+			productReference = C131F85B193A85AD00DE87FE /* Reactive Colors.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C131F87E193A85AD00DE87FE /* Reactive ColorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C131F893193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive ColorsTests" */;
+			buildPhases = (
+				C131F87B193A85AD00DE87FE /* Sources */,
+				C131F87C193A85AD00DE87FE /* Frameworks */,
+				C131F87D193A85AD00DE87FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C131F885193A85AD00DE87FE /* PBXTargetDependency */,
+			);
+			name = "Reactive ColorsTests";
+			productName = "Reactive ColorsTests";
+			productReference = C131F87F193A85AD00DE87FE /* Reactive ColorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C131F853193A85AD00DE87FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RXC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Pete Hodgson";
+				TargetAttributes = {
+					C131F87E193A85AD00DE87FE = {
+						TestTargetID = C131F85A193A85AD00DE87FE;
+					};
+				};
+			};
+			buildConfigurationList = C131F856193A85AD00DE87FE /* Build configuration list for PBXProject "Reactive Colors" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C131F852193A85AD00DE87FE;
+			productRefGroup = C131F85C193A85AD00DE87FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C131F85A193A85AD00DE87FE /* Reactive Colors */,
+				C131F87E193A85AD00DE87FE /* Reactive ColorsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C131F859193A85AD00DE87FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C131F875193A85AD00DE87FE /* Main_iPad.storyboard in Resources */,
+				C131F87A193A85AD00DE87FE /* Images.xcassets in Resources */,
+				C131F872193A85AD00DE87FE /* Main_iPhone.storyboard in Resources */,
+				C131F869193A85AD00DE87FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C131F87D193A85AD00DE87FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C131F88B193A85AD00DE87FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C131F857193A85AD00DE87FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C131F878193A85AD00DE87FE /* RXCViewController.m in Sources */,
+				C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */,
+				C131F86B193A85AD00DE87FE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C131F87B193A85AD00DE87FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C131F88D193A85AD00DE87FE /* Reactive_ColorsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C131F885193A85AD00DE87FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C131F85A193A85AD00DE87FE /* Reactive Colors */;
+			targetProxy = C131F884193A85AD00DE87FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C131F867193A85AD00DE87FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C131F868193A85AD00DE87FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C131F870193A85AD00DE87FE /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C131F871193A85AD00DE87FE /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C131F873193A85AD00DE87FE /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C131F874193A85AD00DE87FE /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C131F889193A85AD00DE87FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C131F88A193A85AD00DE87FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C131F88E193A85AD00DE87FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C131F88F193A85AD00DE87FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C131F891193A85AD00DE87FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
+				INFOPLIST_FILE = "Reactive Colors/Reactive Colors-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C131F892193A85AD00DE87FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
+				INFOPLIST_FILE = "Reactive Colors/Reactive Colors-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C131F894193A85AD00DE87FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Colors.app/Reactive Colors";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Reactive ColorsTests/Reactive ColorsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C131F895193A85AD00DE87FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Colors.app/Reactive Colors";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
+				INFOPLIST_FILE = "Reactive ColorsTests/Reactive ColorsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C131F856193A85AD00DE87FE /* Build configuration list for PBXProject "Reactive Colors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C131F88E193A85AD00DE87FE /* Debug */,
+				C131F88F193A85AD00DE87FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C131F890193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive Colors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C131F891193A85AD00DE87FE /* Debug */,
+				C131F892193A85AD00DE87FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C131F893193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive ColorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C131F894193A85AD00DE87FE /* Debug */,
+				C131F895193A85AD00DE87FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C131F853193A85AD00DE87FE /* Project object */;
+}
