@@ -13,15 +13,16 @@
 		C131F869193A85AD00DE87FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C131F867193A85AD00DE87FE /* InfoPlist.strings */; };
 		C131F86B193A85AD00DE87FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F86A193A85AD00DE87FE /* main.m */; };
 		C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */; };
-		C131F872193A85AD00DE87FE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C131F870193A85AD00DE87FE /* Main_iPhone.storyboard */; };
-		C131F875193A85AD00DE87FE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C131F873193A85AD00DE87FE /* Main_iPad.storyboard */; };
-		C131F878193A85AD00DE87FE /* RXCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F877193A85AD00DE87FE /* RXCViewController.m */; };
 		C131F87A193A85AD00DE87FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C131F879193A85AD00DE87FE /* Images.xcassets */; };
 		C131F881193A85AD00DE87FE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F880193A85AD00DE87FE /* XCTest.framework */; };
 		C131F882193A85AD00DE87FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F85E193A85AD00DE87FE /* Foundation.framework */; };
 		C131F883193A85AD00DE87FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F862193A85AD00DE87FE /* UIKit.framework */; };
 		C131F88B193A85AD00DE87FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C131F889193A85AD00DE87FE /* InfoPlist.strings */; };
 		C131F88D193A85AD00DE87FE /* Reactive_ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */; };
+		C131F89C193BF18C00DE87FE /* RXCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F89A193BF18C00DE87FE /* RXCRootViewController.m */; };
+		C131F89D193BF18C00DE87FE /* RXCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F89A193BF18C00DE87FE /* RXCRootViewController.m */; };
+		C131F89E193BF18C00DE87FE /* RXCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */; };
+		C131F89F193BF18C00DE87FE /* RXCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +46,15 @@
 		C131F86C193A85AD00DE87FE /* Reactive Colors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reactive Colors-Prefix.pch"; sourceTree = "<group>"; };
 		C131F86D193A85AD00DE87FE /* RXCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCAppDelegate.h; sourceTree = "<group>"; };
 		C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCAppDelegate.m; sourceTree = "<group>"; };
-		C131F871193A85AD00DE87FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		C131F874193A85AD00DE87FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		C131F876193A85AD00DE87FE /* RXCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCViewController.h; sourceTree = "<group>"; };
-		C131F877193A85AD00DE87FE /* RXCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCViewController.m; sourceTree = "<group>"; };
 		C131F879193A85AD00DE87FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C131F87F193A85AD00DE87FE /* Reactive ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reactive ColorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C131F880193A85AD00DE87FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C131F888193A85AD00DE87FE /* Reactive ColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive ColorsTests-Info.plist"; sourceTree = "<group>"; };
 		C131F88A193A85AD00DE87FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reactive_ColorsTests.m; sourceTree = "<group>"; };
+		C131F899193BF18C00DE87FE /* RXCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCRootViewController.h; sourceTree = "<group>"; };
+		C131F89A193BF18C00DE87FE /* RXCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCRootViewController.m; sourceTree = "<group>"; };
+		C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXCRootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +116,11 @@
 			children = (
 				C131F86D193A85AD00DE87FE /* RXCAppDelegate.h */,
 				C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */,
-				C131F870193A85AD00DE87FE /* Main_iPhone.storyboard */,
-				C131F873193A85AD00DE87FE /* Main_iPad.storyboard */,
-				C131F876193A85AD00DE87FE /* RXCViewController.h */,
-				C131F877193A85AD00DE87FE /* RXCViewController.m */,
 				C131F879193A85AD00DE87FE /* Images.xcassets */,
 				C131F865193A85AD00DE87FE /* Supporting Files */,
+				C131F899193BF18C00DE87FE /* RXCRootViewController.h */,
+				C131F89A193BF18C00DE87FE /* RXCRootViewController.m */,
+				C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */,
 			);
 			path = "Reactive Colors";
 			sourceTree = "<group>";
@@ -232,10 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C131F875193A85AD00DE87FE /* Main_iPad.storyboard in Resources */,
 				C131F87A193A85AD00DE87FE /* Images.xcassets in Resources */,
-				C131F872193A85AD00DE87FE /* Main_iPhone.storyboard in Resources */,
 				C131F869193A85AD00DE87FE /* InfoPlist.strings in Resources */,
+				C131F89E193BF18C00DE87FE /* RXCRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C131F88B193A85AD00DE87FE /* InfoPlist.strings in Resources */,
+				C131F89F193BF18C00DE87FE /* RXCRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C131F878193A85AD00DE87FE /* RXCViewController.m in Sources */,
 				C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */,
+				C131F89C193BF18C00DE87FE /* RXCRootViewController.m in Sources */,
 				C131F86B193A85AD00DE87FE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C131F89D193BF18C00DE87FE /* RXCRootViewController.m in Sources */,
 				C131F88D193A85AD00DE87FE /* Reactive_ColorsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,22 +285,6 @@
 				C131F868193A85AD00DE87FE /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C131F870193A85AD00DE87FE /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C131F871193A85AD00DE87FE /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C131F873193A85AD00DE87FE /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C131F874193A85AD00DE87FE /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		C131F889193A85AD00DE87FE /* InfoPlist.strings */ = {
@@ -475,6 +459,7 @@
 				C131F892193A85AD00DE87FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C131F893193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive ColorsTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +468,7 @@
 				C131F895193A85AD00DE87FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class RXCRootViewController;
+
 @interface RXCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) RXCRootViewController *viewController;
 
 @end
