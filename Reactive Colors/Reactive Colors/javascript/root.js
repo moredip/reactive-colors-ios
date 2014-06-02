@@ -1,26 +1,19 @@
-(function() {
+rxu.loaded( function(){
+  console.log( "loaded root.js!" );
 
-  var busses = {};
+  ['red-slider','blue-slider','green-slider','alpha-slider'].forEach( rxu.addTracingTo )
 
-  var busNamed = function(name){
-    if( busses[name] == null ){
-      busses[name] = new Bacon.Bus();
-    }
-    return busses[name];
+  var propertyStreams = {
+    r: rxu.racSignal('red-slider').toProperty(1),
+    g: rxu.racSignal('green-slider').toProperty(1),
+    b: rxu.racSignal('blue-slider').toProperty(1),
+    a: rxu.racSignal('alpha-slider').toProperty(1)
   };
 
-  var onObjcSignal = function(name,val){
-    busNamed(name).push(val);
-  }
+  var colorStream = Bacon.combineTemplate( propertyStreams ).map( window.tinycolor.fromRatio );
 
-  rxu.onObjcSignal = onObjcSignal;
-
-
-  rxu.loaded( function(){
-    console.log( "loaded root.js!" );
-
-    busNamed('alpha-slider').onValue( function(val){
-      console.log( "ALPHA: " + val );
-    });
+  colorStream.onValue( function (tc){
+    console.log( "color: " + tc.toRgbString() );
   });
-})();
+  
+});

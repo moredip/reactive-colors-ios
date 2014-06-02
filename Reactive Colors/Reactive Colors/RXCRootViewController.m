@@ -42,11 +42,7 @@
     [self wireUpToJavascript];
     
     RACSignal *alphaSignal = [self.alphaSlider rac_newValueChannelWithNilValue:nil];
-    
-//    [alphaSignal subscribeNext:^(NSNumber *val) {
-//        NSLog( @"alpha slider is at %@", val);
-//    }];
-    
+
     RAC(self.rgbContainerView,alpha) = alphaSignal;
 }
 

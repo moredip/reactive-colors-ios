@@ -40,9 +40,15 @@
 - (JSContext *)enhancedJSContext
 {
     JSContext *jsContext = [[JSContext alloc] initWithVirtualMachine:[[JSVirtualMachine alloc] init]];
+    [self addDummyWindowRootObjectTo:jsContext];
     [self addExceptionLoggingTo:jsContext];
     [self addConsoleLogTo:jsContext];
     return jsContext;
+}
+
+// some JS libraries bomb if there isn't a root window object
+- (void)addDummyWindowRootObjectTo:(JSContext *)jsContext{
+    jsContext[@"window"] = [JSValue valueWithNewObjectInContext:jsContext];
 }
 
 - (void)addExceptionLoggingTo:(JSContext *)jsContext{
@@ -72,6 +78,8 @@
         NSString *javascript = [NSString stringWithContentsOfFile:jsPath encoding:NSUTF8StringEncoding error:nil];
         [self.jsContext evaluateScript:javascript];
     }
+    
+    // TODO? copy everything from window into root context? helps with compatibility with libraries that assume window === global === root
     
     for (JSValue *callback in self.loadedCallbacks) {
         [callback callWithArguments:@[]];
