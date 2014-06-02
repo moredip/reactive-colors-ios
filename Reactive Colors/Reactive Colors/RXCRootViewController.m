@@ -7,8 +7,12 @@
 //
 
 #import "RXCRootViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface RXCRootViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *redSlider;
+@property (weak, nonatomic) IBOutlet UISlider *greenSlider;
+@property (weak, nonatomic) IBOutlet UISlider *blueSlider;
 
 @end
 
@@ -26,6 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[self.redSlider rac_newValueChannelWithNilValue:nil] subscribeNext:^(NSNumber *val) {
+        NSLog( @"red slider is at %@", val);
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 

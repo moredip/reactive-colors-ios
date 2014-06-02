@@ -1,5 +1,9 @@
 # Created by http://www.gitignore.io
 
+Gemfile.lock
+.bundle
+vendor/bundle
+
 ### Objective-C ###
 # Xcode
 #
@@ -18,3 +22,6 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+
+Pods
+Podfile.lock

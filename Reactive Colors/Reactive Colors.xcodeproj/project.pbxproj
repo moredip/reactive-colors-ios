@@ -1,476 +1,1103 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		C131F85F193A85AD00DE87FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F85E193A85AD00DE87FE /* Foundation.framework */; };
-		C131F861193A85AD00DE87FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F860193A85AD00DE87FE /* CoreGraphics.framework */; };
-		C131F863193A85AD00DE87FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F862193A85AD00DE87FE /* UIKit.framework */; };
-		C131F869193A85AD00DE87FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C131F867193A85AD00DE87FE /* InfoPlist.strings */; };
-		C131F86B193A85AD00DE87FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F86A193A85AD00DE87FE /* main.m */; };
-		C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */; };
-		C131F87A193A85AD00DE87FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C131F879193A85AD00DE87FE /* Images.xcassets */; };
-		C131F881193A85AD00DE87FE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F880193A85AD00DE87FE /* XCTest.framework */; };
-		C131F882193A85AD00DE87FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F85E193A85AD00DE87FE /* Foundation.framework */; };
-		C131F883193A85AD00DE87FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C131F862193A85AD00DE87FE /* UIKit.framework */; };
-		C131F88B193A85AD00DE87FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C131F889193A85AD00DE87FE /* InfoPlist.strings */; };
-		C131F88D193A85AD00DE87FE /* Reactive_ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */; };
-		C131F89C193BF18C00DE87FE /* RXCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F89A193BF18C00DE87FE /* RXCRootViewController.m */; };
-		C131F89D193BF18C00DE87FE /* RXCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F89A193BF18C00DE87FE /* RXCRootViewController.m */; };
-		C131F89E193BF18C00DE87FE /* RXCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */; };
-		C131F89F193BF18C00DE87FE /* RXCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C131F884193A85AD00DE87FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C131F853193A85AD00DE87FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C131F85A193A85AD00DE87FE;
-			remoteInfo = "Reactive Colors";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		C131F85B193A85AD00DE87FE /* Reactive Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Colors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C131F85E193A85AD00DE87FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C131F860193A85AD00DE87FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C131F862193A85AD00DE87FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		C131F866193A85AD00DE87FE /* Reactive Colors-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive Colors-Info.plist"; sourceTree = "<group>"; };
-		C131F868193A85AD00DE87FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C131F86A193A85AD00DE87FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C131F86C193A85AD00DE87FE /* Reactive Colors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reactive Colors-Prefix.pch"; sourceTree = "<group>"; };
-		C131F86D193A85AD00DE87FE /* RXCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCAppDelegate.h; sourceTree = "<group>"; };
-		C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCAppDelegate.m; sourceTree = "<group>"; };
-		C131F879193A85AD00DE87FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C131F87F193A85AD00DE87FE /* Reactive ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reactive ColorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C131F880193A85AD00DE87FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		C131F888193A85AD00DE87FE /* Reactive ColorsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive ColorsTests-Info.plist"; sourceTree = "<group>"; };
-		C131F88A193A85AD00DE87FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reactive_ColorsTests.m; sourceTree = "<group>"; };
-		C131F899193BF18C00DE87FE /* RXCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCRootViewController.h; sourceTree = "<group>"; };
-		C131F89A193BF18C00DE87FE /* RXCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCRootViewController.m; sourceTree = "<group>"; };
-		C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXCRootViewController.xib; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C131F858193A85AD00DE87FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C131F861193A85AD00DE87FE /* CoreGraphics.framework in Frameworks */,
-				C131F863193A85AD00DE87FE /* UIKit.framework in Frameworks */,
-				C131F85F193A85AD00DE87FE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C131F87C193A85AD00DE87FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C131F881193A85AD00DE87FE /* XCTest.framework in Frameworks */,
-				C131F883193A85AD00DE87FE /* UIKit.framework in Frameworks */,
-				C131F882193A85AD00DE87FE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		C131F852193A85AD00DE87FE = {
-			isa = PBXGroup;
-			children = (
-				C131F864193A85AD00DE87FE /* Reactive Colors */,
-				C131F886193A85AD00DE87FE /* Reactive ColorsTests */,
-				C131F85D193A85AD00DE87FE /* Frameworks */,
-				C131F85C193A85AD00DE87FE /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		C131F85C193A85AD00DE87FE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C131F85B193A85AD00DE87FE /* Reactive Colors.app */,
-				C131F87F193A85AD00DE87FE /* Reactive ColorsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C131F85D193A85AD00DE87FE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C131F85E193A85AD00DE87FE /* Foundation.framework */,
-				C131F860193A85AD00DE87FE /* CoreGraphics.framework */,
-				C131F862193A85AD00DE87FE /* UIKit.framework */,
-				C131F880193A85AD00DE87FE /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C131F864193A85AD00DE87FE /* Reactive Colors */ = {
-			isa = PBXGroup;
-			children = (
-				C131F86D193A85AD00DE87FE /* RXCAppDelegate.h */,
-				C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */,
-				C131F879193A85AD00DE87FE /* Images.xcassets */,
-				C131F865193A85AD00DE87FE /* Supporting Files */,
-				C131F899193BF18C00DE87FE /* RXCRootViewController.h */,
-				C131F89A193BF18C00DE87FE /* RXCRootViewController.m */,
-				C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */,
-			);
-			path = "Reactive Colors";
-			sourceTree = "<group>";
-		};
-		C131F865193A85AD00DE87FE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C131F866193A85AD00DE87FE /* Reactive Colors-Info.plist */,
-				C131F867193A85AD00DE87FE /* InfoPlist.strings */,
-				C131F86A193A85AD00DE87FE /* main.m */,
-				C131F86C193A85AD00DE87FE /* Reactive Colors-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C131F886193A85AD00DE87FE /* Reactive ColorsTests */ = {
-			isa = PBXGroup;
-			children = (
-				C131F88C193A85AD00DE87FE /* Reactive_ColorsTests.m */,
-				C131F887193A85AD00DE87FE /* Supporting Files */,
-			);
-			path = "Reactive ColorsTests";
-			sourceTree = "<group>";
-		};
-		C131F887193A85AD00DE87FE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C131F888193A85AD00DE87FE /* Reactive ColorsTests-Info.plist */,
-				C131F889193A85AD00DE87FE /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		C131F85A193A85AD00DE87FE /* Reactive Colors */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C131F890193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive Colors" */;
-			buildPhases = (
-				C131F857193A85AD00DE87FE /* Sources */,
-				C131F858193A85AD00DE87FE /* Frameworks */,
-				C131F859193A85AD00DE87FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Reactive Colors";
-			productName = "Reactive Colors";
-			productReference = C131F85B193A85AD00DE87FE /* Reactive Colors.app */;
-			productType = "com.apple.product-type.application";
-		};
-		C131F87E193A85AD00DE87FE /* Reactive ColorsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C131F893193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive ColorsTests" */;
-			buildPhases = (
-				C131F87B193A85AD00DE87FE /* Sources */,
-				C131F87C193A85AD00DE87FE /* Frameworks */,
-				C131F87D193A85AD00DE87FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C131F885193A85AD00DE87FE /* PBXTargetDependency */,
-			);
-			name = "Reactive ColorsTests";
-			productName = "Reactive ColorsTests";
-			productReference = C131F87F193A85AD00DE87FE /* Reactive ColorsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		C131F853193A85AD00DE87FE /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = RXC;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Pete Hodgson";
-				TargetAttributes = {
-					C131F87E193A85AD00DE87FE = {
-						TestTargetID = C131F85A193A85AD00DE87FE;
-					};
-				};
-			};
-			buildConfigurationList = C131F856193A85AD00DE87FE /* Build configuration list for PBXProject "Reactive Colors" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = C131F852193A85AD00DE87FE;
-			productRefGroup = C131F85C193A85AD00DE87FE /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				C131F85A193A85AD00DE87FE /* Reactive Colors */,
-				C131F87E193A85AD00DE87FE /* Reactive ColorsTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		C131F859193A85AD00DE87FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C131F87A193A85AD00DE87FE /* Images.xcassets in Resources */,
-				C131F869193A85AD00DE87FE /* InfoPlist.strings in Resources */,
-				C131F89E193BF18C00DE87FE /* RXCRootViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C131F87D193A85AD00DE87FE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C131F88B193A85AD00DE87FE /* InfoPlist.strings in Resources */,
-				C131F89F193BF18C00DE87FE /* RXCRootViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		C131F857193A85AD00DE87FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */,
-				C131F89C193BF18C00DE87FE /* RXCRootViewController.m in Sources */,
-				C131F86B193A85AD00DE87FE /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C131F87B193A85AD00DE87FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C131F89D193BF18C00DE87FE /* RXCRootViewController.m in Sources */,
-				C131F88D193A85AD00DE87FE /* Reactive_ColorsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C131F885193A85AD00DE87FE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C131F85A193A85AD00DE87FE /* Reactive Colors */;
-			targetProxy = C131F884193A85AD00DE87FE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C131F867193A85AD00DE87FE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C131F868193A85AD00DE87FE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C131F889193A85AD00DE87FE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C131F88A193A85AD00DE87FE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		C131F88E193A85AD00DE87FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C131F88F193A85AD00DE87FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C131F891193A85AD00DE87FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
-				INFOPLIST_FILE = "Reactive Colors/Reactive Colors-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		C131F892193A85AD00DE87FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
-				INFOPLIST_FILE = "Reactive Colors/Reactive Colors-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		C131F894193A85AD00DE87FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Colors.app/Reactive Colors";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Reactive ColorsTests/Reactive ColorsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		C131F895193A85AD00DE87FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Colors.app/Reactive Colors";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Reactive Colors/Reactive Colors-Prefix.pch";
-				INFOPLIST_FILE = "Reactive ColorsTests/Reactive ColorsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		C131F856193A85AD00DE87FE /* Build configuration list for PBXProject "Reactive Colors" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C131F88E193A85AD00DE87FE /* Debug */,
-				C131F88F193A85AD00DE87FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C131F890193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive Colors" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C131F891193A85AD00DE87FE /* Debug */,
-				C131F892193A85AD00DE87FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C131F893193A85AD00DE87FE /* Build configuration list for PBXNativeTarget "Reactive ColorsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C131F894193A85AD00DE87FE /* Debug */,
-				C131F895193A85AD00DE87FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = C131F853193A85AD00DE87FE /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>319DC49A081F4E20B2E6478A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>6B78E3D0536A4A8BBCADAE85</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-Reactive Colors-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>81A37F7202CB462A85359C5C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8327882B4D774C378C5B61AA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8327882B4D774C378C5B61AA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Reactive Colors.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>A78BCC4A323C4A59BD200A9B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Reactive Colors.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-Reactive Colors.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F852193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F864193A85AD00DE87FE</string>
+				<string>C131F886193A85AD00DE87FE</string>
+				<string>C131F85D193A85AD00DE87FE</string>
+				<string>C131F85C193A85AD00DE87FE</string>
+				<string>A78BCC4A323C4A59BD200A9B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F853193A85AD00DE87FE</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>RXC</string>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Pete Hodgson</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>C131F87E193A85AD00DE87FE</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>C131F85A193A85AD00DE87FE</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>C131F856193A85AD00DE87FE</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>C131F852193A85AD00DE87FE</string>
+			<key>productRefGroup</key>
+			<string>C131F85C193A85AD00DE87FE</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>C131F85A193A85AD00DE87FE</string>
+				<string>C131F87E193A85AD00DE87FE</string>
+			</array>
+		</dict>
+		<key>C131F856193A85AD00DE87FE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C131F88E193A85AD00DE87FE</string>
+				<string>C131F88F193A85AD00DE87FE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C131F857193A85AD00DE87FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C131F86F193A85AD00DE87FE</string>
+				<string>C131F89C193BF18C00DE87FE</string>
+				<string>C131F86B193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C131F858193A85AD00DE87FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C131F861193A85AD00DE87FE</string>
+				<string>C131F863193A85AD00DE87FE</string>
+				<string>C131F85F193A85AD00DE87FE</string>
+				<string>81A37F7202CB462A85359C5C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C131F859193A85AD00DE87FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C131F87A193A85AD00DE87FE</string>
+				<string>C131F869193A85AD00DE87FE</string>
+				<string>C131F89E193BF18C00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C131F85A193A85AD00DE87FE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>C131F890193A85AD00DE87FE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>319DC49A081F4E20B2E6478A</string>
+				<string>C131F857193A85AD00DE87FE</string>
+				<string>C131F858193A85AD00DE87FE</string>
+				<string>C131F859193A85AD00DE87FE</string>
+				<string>6B78E3D0536A4A8BBCADAE85</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Reactive Colors</string>
+			<key>productName</key>
+			<string>Reactive Colors</string>
+			<key>productReference</key>
+			<string>C131F85B193A85AD00DE87FE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>C131F85B193A85AD00DE87FE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Reactive Colors.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C131F85C193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F85B193A85AD00DE87FE</string>
+				<string>C131F87F193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F85D193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F85E193A85AD00DE87FE</string>
+				<string>C131F860193A85AD00DE87FE</string>
+				<string>C131F862193A85AD00DE87FE</string>
+				<string>C131F880193A85AD00DE87FE</string>
+				<string>8327882B4D774C378C5B61AA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F85E193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C131F85F193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F85E193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F860193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C131F861193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F860193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F862193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C131F863193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F862193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F864193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F86D193A85AD00DE87FE</string>
+				<string>C131F86E193A85AD00DE87FE</string>
+				<string>C131F879193A85AD00DE87FE</string>
+				<string>C131F865193A85AD00DE87FE</string>
+				<string>C131F899193BF18C00DE87FE</string>
+				<string>C131F89A193BF18C00DE87FE</string>
+				<string>C131F89B193BF18C00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Reactive Colors</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F865193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F866193A85AD00DE87FE</string>
+				<string>C131F867193A85AD00DE87FE</string>
+				<string>C131F86A193A85AD00DE87FE</string>
+				<string>C131F86C193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F866193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Reactive Colors-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F867193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F868193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F868193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F869193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F867193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F86A193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F86B193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F86A193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F86C193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Reactive Colors-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F86D193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RXCAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F86E193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RXCAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F86F193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F86E193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F879193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F87A193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F879193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F87B193A85AD00DE87FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C131F89D193BF18C00DE87FE</string>
+				<string>C131F88D193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C131F87C193A85AD00DE87FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C131F881193A85AD00DE87FE</string>
+				<string>C131F883193A85AD00DE87FE</string>
+				<string>C131F882193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C131F87D193A85AD00DE87FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C131F88B193A85AD00DE87FE</string>
+				<string>C131F89F193BF18C00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C131F87E193A85AD00DE87FE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>C131F893193A85AD00DE87FE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C131F87B193A85AD00DE87FE</string>
+				<string>C131F87C193A85AD00DE87FE</string>
+				<string>C131F87D193A85AD00DE87FE</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>C131F885193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Reactive ColorsTests</string>
+			<key>productName</key>
+			<string>Reactive ColorsTests</string>
+			<key>productReference</key>
+			<string>C131F87F193A85AD00DE87FE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>C131F87F193A85AD00DE87FE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Reactive ColorsTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C131F880193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>C131F881193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F880193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F882193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F85E193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F883193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F862193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F884193A85AD00DE87FE</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>C131F853193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>C131F85A193A85AD00DE87FE</string>
+			<key>remoteInfo</key>
+			<string>Reactive Colors</string>
+		</dict>
+		<key>C131F885193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>C131F85A193A85AD00DE87FE</string>
+			<key>targetProxy</key>
+			<string>C131F884193A85AD00DE87FE</string>
+		</dict>
+		<key>C131F886193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F88C193A85AD00DE87FE</string>
+				<string>C131F887193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Reactive ColorsTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F887193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F888193A85AD00DE87FE</string>
+				<string>C131F889193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F888193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Reactive ColorsTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F889193A85AD00DE87FE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C131F88A193A85AD00DE87FE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F88A193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F88B193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F889193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F88C193A85AD00DE87FE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Reactive_ColorsTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F88D193A85AD00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F88C193A85AD00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F88E193A85AD00DE87FE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C131F88F193A85AD00DE87FE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C131F890193A85AD00DE87FE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C131F891193A85AD00DE87FE</string>
+				<string>C131F892193A85AD00DE87FE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C131F891193A85AD00DE87FE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A78BCC4A323C4A59BD200A9B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Reactive Colors/Reactive Colors-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Reactive Colors/Reactive Colors-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C131F892193A85AD00DE87FE</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A78BCC4A323C4A59BD200A9B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Reactive Colors/Reactive Colors-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Reactive Colors/Reactive Colors-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C131F893193A85AD00DE87FE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C131F894193A85AD00DE87FE</string>
+				<string>C131F895193A85AD00DE87FE</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C131F894193A85AD00DE87FE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Reactive Colors.app/Reactive Colors</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Reactive Colors/Reactive Colors-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Reactive ColorsTests/Reactive ColorsTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C131F895193A85AD00DE87FE</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Reactive Colors.app/Reactive Colors</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Reactive Colors/Reactive Colors-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Reactive ColorsTests/Reactive ColorsTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C131F899193BF18C00DE87FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RXCRootViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F89A193BF18C00DE87FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RXCRootViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F89B193BF18C00DE87FE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>RXCRootViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C131F89C193BF18C00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F89A193BF18C00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F89D193BF18C00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F89A193BF18C00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F89E193BF18C00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F89B193BF18C00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C131F89F193BF18C00DE87FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C131F89B193BF18C00DE87FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>C131F853193A85AD00DE87FE</string>
+</dict>
+</plist>

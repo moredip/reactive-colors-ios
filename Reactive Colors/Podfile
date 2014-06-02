@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+
+platform :ios, '7.0'
+ 
+
+target "Reactive Colors" do
+  pod 'ReactiveCocoa', '2.1.8'
+end
+
+target "Reactive ColorsTests" do
+
+end
+
