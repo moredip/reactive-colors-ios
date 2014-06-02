@@ -13,6 +13,7 @@
 
 @interface RXCJavascriptBridge()
 @property (strong) JSContext *jsContext;
+@property (strong) NSMutableArray *loadedCallbacks;
 @end
 
 @implementation RXCJavascriptBridge
@@ -22,6 +23,7 @@
     self = [super init];
     if (self) {
         self.jsContext = [self enhancedJSContext];
+        self.loadedCallbacks = [NSMutableArray array];
     }
     return self;
 }
@@ -38,26 +40,42 @@
 - (JSContext *)enhancedJSContext
 {
     JSContext *jsContext = [[JSContext alloc] initWithVirtualMachine:[[JSVirtualMachine alloc] init]];
-    
+    [self addExceptionLoggingTo:jsContext];
+    [self addConsoleLogTo:jsContext];
+    return jsContext;
+}
+
+- (void)addExceptionLoggingTo:(JSContext *)jsContext{
     [jsContext setExceptionHandler:^(JSContext *ctx, JSValue *val) {
         NSLog(@"!!! JAVASCRIPT EXCEPTION in %@ !!!.\n%@",ctx, val);
     }];
-    
+}
+
+- (void)addConsoleLogTo:(JSContext *)jsContext{
     jsContext[@"console"] = [JSValue valueWithNewObjectInContext:jsContext];
     jsContext[@"console"][@"log"] = ^(JSValue *msg) {
         NSLog(@"console.log from %@: %@",[JSContext currentContext], msg);
     };
-    
-    jsContext[@"rxu"] = [JSValue valueWithNewObjectInContext:jsContext];
-    
-    return jsContext;
 }
 
 - (void)bootJavascript
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"root" ofType:@"js"];
-    NSString *javascript = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    [self.jsContext evaluateScript:javascript];
+    self.jsContext[@"rxu"] = [JSValue valueWithNewObjectInContext:self.jsContext];
+    self.jsContext[@"rxu"][@"loaded"] = ^(JSValue *callback) {
+        [self.loadedCallbacks addObject:callback];
+    };
+    
+    NSArray *javascripts = [[NSBundle mainBundle] pathsForResourcesOfType:@"js" inDirectory:@"javascript"];
+    
+    for (NSString *jsPath in javascripts) {
+        NSLog(@"loading javascript from %@",jsPath);
+        NSString *javascript = [NSString stringWithContentsOfFile:jsPath encoding:NSUTF8StringEncoding error:nil];
+        [self.jsContext evaluateScript:javascript];
+    }
+    
+    for (JSValue *callback in self.loadedCallbacks) {
+        [callback callWithArguments:@[]];
+    }
 }
 
 @end

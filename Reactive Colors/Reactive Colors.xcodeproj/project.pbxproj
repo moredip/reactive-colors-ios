@@ -24,10 +24,9 @@
 		C131F89D193BF18C00DE87FE /* RXCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C131F89A193BF18C00DE87FE /* RXCRootViewController.m */; };
 		C131F89E193BF18C00DE87FE /* RXCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */; };
 		C131F89F193BF18C00DE87FE /* RXCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */; };
-		C1990AAE193C050B00C2899A /* root.js in Sources */ = {isa = PBXBuildFile; fileRef = C1990AAD193C050B00C2899A /* root.js */; };
-		C1990AAF193C0B3C00C2899A /* root.js in Resources */ = {isa = PBXBuildFile; fileRef = C1990AAD193C050B00C2899A /* root.js */; };
 		C1990AB2193C0FE000C2899A /* RXCJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C1990AB1193C0FE000C2899A /* RXCJavascriptBridge.m */; };
 		C1990AB3193C0FE000C2899A /* RXCJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C1990AB1193C0FE000C2899A /* RXCJavascriptBridge.m */; };
+		C1990ABC193C495400C2899A /* javascript in Resources */ = {isa = PBXBuildFile; fileRef = C1990ABB193C495400C2899A /* javascript */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +61,9 @@
 		C131F899193BF18C00DE87FE /* RXCRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCRootViewController.h; sourceTree = "<group>"; };
 		C131F89A193BF18C00DE87FE /* RXCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCRootViewController.m; sourceTree = "<group>"; };
 		C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXCRootViewController.xib; sourceTree = "<group>"; };
-		C1990AAD193C050B00C2899A /* root.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = root.js; sourceTree = "<group>"; };
 		C1990AB0193C0FE000C2899A /* RXCJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCJavascriptBridge.h; sourceTree = "<group>"; };
 		C1990AB1193C0FE000C2899A /* RXCJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCJavascriptBridge.m; sourceTree = "<group>"; };
+		C1990ABB193C495400C2899A /* javascript */ = {isa = PBXFileReference; lastKnownFileType = folder; path = javascript; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +126,7 @@
 		C131F864193A85AD00DE87FE /* Reactive Colors */ = {
 			isa = PBXGroup;
 			children = (
-				C1990AAC193C04EC00C2899A /* javascript */,
+				C1990ABB193C495400C2899A /* javascript */,
 				C131F86D193A85AD00DE87FE /* RXCAppDelegate.h */,
 				C131F86E193A85AD00DE87FE /* RXCAppDelegate.m */,
 				C131F879193A85AD00DE87FE /* Images.xcassets */,
@@ -168,14 +167,6 @@
 				C131F889193A85AD00DE87FE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C1990AAC193C04EC00C2899A /* javascript */ = {
-			isa = PBXGroup;
-			children = (
-				C1990AAD193C050B00C2899A /* root.js */,
-			);
-			name = javascript;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1990AAF193C0B3C00C2899A /* root.js in Resources */,
 				C131F87A193A85AD00DE87FE /* Images.xcassets in Resources */,
+				C1990ABC193C495400C2899A /* javascript in Resources */,
 				C131F869193A85AD00DE87FE /* InfoPlist.strings in Resources */,
 				C131F89E193BF18C00DE87FE /* RXCRootViewController.xib in Resources */,
 			);
@@ -316,7 +307,6 @@
 				C1990AB2193C0FE000C2899A /* RXCJavascriptBridge.m in Sources */,
 				C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */,
 				C131F89C193BF18C00DE87FE /* RXCRootViewController.m in Sources */,
-				C1990AAE193C050B00C2899A /* root.js in Sources */,
 				C131F86B193A85AD00DE87FE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
