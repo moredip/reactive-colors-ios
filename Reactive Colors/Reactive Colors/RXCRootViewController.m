@@ -9,7 +9,8 @@
 #import "RXCRootViewController.h"
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <JavaScriptCore/JavaScriptCore.h>
+
+#import "RXCJavascriptBridge.h"
 
 @interface RXCRootViewController ()
 @property (weak, nonatomic) IBOutlet UISlider *redSlider;
@@ -18,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISlider *alphaSlider;
 @property (weak, nonatomic) IBOutlet UIView *rgbContainerView;
 
-@property (strong) JSContext *jsContext;
+@property (strong) RXCJavascriptBridge *js;
 
 @end
 
@@ -28,7 +29,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.jsContext = [self enhancedJSContext];
+        self.js = [[RXCJavascriptBridge alloc] init];
+        [self.js bootJavascript];
     }
     return self;
 }
@@ -37,37 +39,23 @@
 {
     [super viewDidLoad];
     
+    [self wireUpToJavascript];
+    
     RACSignal *alphaSignal = [self.alphaSlider rac_newValueChannelWithNilValue:nil];
     
-    [alphaSignal subscribeNext:^(NSNumber *val) {
-        NSLog( @"alpha slider is at %@", val);
-    }];
+//    [alphaSignal subscribeNext:^(NSNumber *val) {
+//        NSLog( @"alpha slider is at %@", val);
+//    }];
     
     RAC(self.rgbContainerView,alpha) = alphaSignal;
-    
-    [self bootJavascriptInto:self.jsContext];
 }
 
-- (JSContext *)enhancedJSContext
+- (void)wireUpToJavascript
 {
-    JSContext *jsContext = [[JSContext alloc] initWithVirtualMachine:[[JSVirtualMachine alloc] init]];
-    [jsContext setExceptionHandler:^(JSContext *ctx, JSValue *val) {
-        NSLog(@"!!! JAVASCRIPT EXCEPTION in %@ !!!.\n%@",ctx, val);
-    }];
-    
-    jsContext[@"console"] = [JSValue valueWithNewObjectInContext:jsContext];
-    jsContext[@"console"][@"log"] = ^(JSValue *msg) {
-        NSLog(@"console.log from %@: %@",[JSContext currentContext], msg);
-    };
-    
-    return jsContext;
-}
-
-- (void)bootJavascriptInto:(JSContext *)jsContext
-{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"root" ofType:@"js"];
-    NSString *javascript = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    [jsContext evaluateScript:javascript];
+    [self.js registerSignal:[self.redSlider rac_newValueChannelWithNilValue:nil] named:@"red-slider"];
+    [self.js registerSignal:[self.greenSlider rac_newValueChannelWithNilValue:nil] named:@"green-slider"];
+    [self.js registerSignal:[self.blueSlider rac_newValueChannelWithNilValue:nil] named:@"blue-slider"];
+    [self.js registerSignal:[self.alphaSlider rac_newValueChannelWithNilValue:nil] named:@"alpha-slider"];
 }
 
 - (void)didReceiveMemoryWarning

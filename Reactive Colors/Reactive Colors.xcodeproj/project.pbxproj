@@ -26,6 +26,8 @@
 		C131F89F193BF18C00DE87FE /* RXCRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */; };
 		C1990AAE193C050B00C2899A /* root.js in Sources */ = {isa = PBXBuildFile; fileRef = C1990AAD193C050B00C2899A /* root.js */; };
 		C1990AAF193C0B3C00C2899A /* root.js in Resources */ = {isa = PBXBuildFile; fileRef = C1990AAD193C050B00C2899A /* root.js */; };
+		C1990AB2193C0FE000C2899A /* RXCJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C1990AB1193C0FE000C2899A /* RXCJavascriptBridge.m */; };
+		C1990AB3193C0FE000C2899A /* RXCJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C1990AB1193C0FE000C2899A /* RXCJavascriptBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		C131F89A193BF18C00DE87FE /* RXCRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCRootViewController.m; sourceTree = "<group>"; };
 		C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXCRootViewController.xib; sourceTree = "<group>"; };
 		C1990AAD193C050B00C2899A /* root.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = root.js; sourceTree = "<group>"; };
+		C1990AB0193C0FE000C2899A /* RXCJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCJavascriptBridge.h; sourceTree = "<group>"; };
+		C1990AB1193C0FE000C2899A /* RXCJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCJavascriptBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 				C131F899193BF18C00DE87FE /* RXCRootViewController.h */,
 				C131F89A193BF18C00DE87FE /* RXCRootViewController.m */,
 				C131F89B193BF18C00DE87FE /* RXCRootViewController.xib */,
+				C1990AB0193C0FE000C2899A /* RXCJavascriptBridge.h */,
+				C1990AB1193C0FE000C2899A /* RXCJavascriptBridge.m */,
 			);
 			path = "Reactive Colors";
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1990AB2193C0FE000C2899A /* RXCJavascriptBridge.m in Sources */,
 				C131F86F193A85AD00DE87FE /* RXCAppDelegate.m in Sources */,
 				C131F89C193BF18C00DE87FE /* RXCRootViewController.m in Sources */,
 				C1990AAE193C050B00C2899A /* root.js in Sources */,
@@ -319,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C131F89D193BF18C00DE87FE /* RXCRootViewController.m in Sources */,
+				C1990AB3193C0FE000C2899A /* RXCJavascriptBridge.m in Sources */,
 				C131F88D193A85AD00DE87FE /* Reactive_ColorsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
