@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UISlider *redSlider;
 @property (weak, nonatomic) IBOutlet UISlider *greenSlider;
 @property (weak, nonatomic) IBOutlet UISlider *blueSlider;
+@property (weak, nonatomic) IBOutlet UISlider *alphaSlider;
+@property (weak, nonatomic) IBOutlet UIView *rgbContainerView;
 
 @end
 
@@ -31,9 +33,14 @@
 {
     [super viewDidLoad];
     
-    [[self.redSlider rac_newValueChannelWithNilValue:nil] subscribeNext:^(NSNumber *val) {
-        NSLog( @"red slider is at %@", val);
+    RACSignal *alphaSignal = [self.alphaSlider rac_newValueChannelWithNilValue:nil];
+    
+    [alphaSignal subscribeNext:^(NSNumber *val) {
+        NSLog( @"alpha slider is at %@", val);
     }];
+    
+    RAC(self.rgbContainerView,alpha) = alphaSignal;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
