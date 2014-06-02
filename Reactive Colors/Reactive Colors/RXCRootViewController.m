@@ -7,7 +7,9 @@
 //
 
 #import "RXCRootViewController.h"
+
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 
 @interface RXCRootViewController ()
 @property (weak, nonatomic) IBOutlet UISlider *redSlider;
@@ -15,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UISlider *blueSlider;
 @property (weak, nonatomic) IBOutlet UISlider *alphaSlider;
 @property (weak, nonatomic) IBOutlet UIView *rgbContainerView;
+
+@property (strong) JSContext *jsContext;
 
 @end
 
@@ -24,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.jsContext = [self enhancedJSContext];
     }
     return self;
 }
@@ -41,7 +45,29 @@
     
     RAC(self.rgbContainerView,alpha) = alphaSignal;
     
-    // Do any additional setup after loading the view from its nib.
+    [self bootJavascriptInto:self.jsContext];
+}
+
+- (JSContext *)enhancedJSContext
+{
+    JSContext *jsContext = [[JSContext alloc] initWithVirtualMachine:[[JSVirtualMachine alloc] init]];
+    [jsContext setExceptionHandler:^(JSContext *ctx, JSValue *val) {
+        NSLog(@"!!! JAVASCRIPT EXCEPTION in %@ !!!.\n%@",ctx, val);
+    }];
+    
+    jsContext[@"console"] = [JSValue valueWithNewObjectInContext:jsContext];
+    jsContext[@"console"][@"log"] = ^(JSValue *msg) {
+        NSLog(@"console.log from %@: %@",[JSContext currentContext], msg);
+    };
+    
+    return jsContext;
+}
+
+- (void)bootJavascriptInto:(JSContext *)jsContext
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"root" ofType:@"js"];
+    NSString *javascript = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    [jsContext evaluateScript:javascript];
 }
 
 - (void)didReceiveMemoryWarning
