@@ -97,18 +97,38 @@
     };
     
     NSArray *javascripts = [[NSBundle mainBundle] pathsForResourcesOfType:@"js" inDirectory:@"javascript"];
-    
     for (NSString *jsPath in javascripts) {
-        NSLog(@"loading javascript from %@",jsPath);
-        NSString *javascript = [NSString stringWithContentsOfFile:jsPath encoding:NSUTF8StringEncoding error:nil];
-        [self.jsContext evaluateScript:javascript];
+        [self loadJavaScriptFileAt:jsPath intoContext:self.jsContext];
     }
+    
+    JSValue *coffeescriptCompiler = [self getCoffeeScriptCompilationFunction];
+    NSArray *coffeescripts = [[NSBundle mainBundle] pathsForResourcesOfType:@"coffee" inDirectory:@"javascript"];
+    for (NSString *coffeePath in coffeescripts) {
+        NSLog(@"loading coffescript from %@",coffeePath);
+        NSString *coffeescript = [NSString stringWithContentsOfFile:coffeePath encoding:NSUTF8StringEncoding error:nil];
+        NSString *compiledJavascript = [[coffeescriptCompiler callWithArguments:@[coffeescript]] toString];
+        [self.jsContext evaluateScript:compiledJavascript];
+    }
+    
     
     // TODO? copy everything from window into root context? helps with compatibility with libraries that assume window === global === root
     
     for (JSValue *callback in self.loadedCallbacks) {
         [callback callWithArguments:@[]];
     }
+}
+
+- (JSValue *)getCoffeeScriptCompilationFunction {
+    JSContext *coffeescriptCompilationContext = [[JSContext alloc] init];
+    [self loadJavaScriptFileAt:[[NSBundle mainBundle] pathForResource:@"coffee-script" ofType:@"js" inDirectory:@"javascript"]
+                   intoContext:coffeescriptCompilationContext];
+    return coffeescriptCompilationContext[@"CoffeeScript"][@"compile"];
+}
+
+- (void)loadJavaScriptFileAt:(NSString *)jsPath intoContext:(JSContext *)jsContext {
+    NSLog(@"loading javascript from %@",jsPath);
+    NSString *javascript = [NSString stringWithContentsOfFile:jsPath encoding:NSUTF8StringEncoding error:nil];
+    [jsContext evaluateScript:javascript];
 }
 
 @end
