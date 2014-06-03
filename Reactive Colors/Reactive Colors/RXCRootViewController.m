@@ -41,9 +41,9 @@
     
     [self wireUpToJavascript];
     
-    RACSignal *alphaSignal = [self.alphaSlider rac_newValueChannelWithNilValue:nil];
+    //RACSignal *alphaSignal = [self.alphaSlider rac_newValueChannelWithNilValue:nil];
 
-    RAC(self.rgbContainerView,alpha) = alphaSignal;
+    //RAC(self.rgbContainerView,alpha) = alphaSignal;
 }
 
 - (void)wireUpToJavascript
@@ -52,6 +52,25 @@
     [self.js registerSignal:[self.greenSlider rac_newValueChannelWithNilValue:nil] named:@"green-slider"];
     [self.js registerSignal:[self.blueSlider rac_newValueChannelWithNilValue:nil] named:@"blue-slider"];
     [self.js registerSignal:[self.alphaSlider rac_newValueChannelWithNilValue:nil] named:@"alpha-slider"];
+    
+    RACSignal *color = [[self.js signalNamed:@"color-dict"] map:^id(NSDictionary *rgba) {
+            return [UIColor colorWithRed:[(NSNumber *)rgba[@"r"] floatValue]
+                                   green:[(NSNumber *)rgba[@"g"] floatValue]
+                                    blue:[(NSNumber *)rgba[@"b"] floatValue]
+                                   alpha:[(NSNumber *)rgba[@"a"] floatValue]];
+        }];
+    
+    [color logAll];
+    
+    RAC(self.rgbContainerView,backgroundColor) = color;
+    
+    [color subscribeNext:^(id value) {
+        NSLog(@"COLORRRRRRR: %@", value);
+        self.rgbContainerView.backgroundColor = (UIColor *)value;
+    }];
+    
+    
+//    RAC(self.rgbContainerView,alpha) = [self.js signalNamed:@"alpha-channel"];
 }
 
 - (void)didReceiveMemoryWarning

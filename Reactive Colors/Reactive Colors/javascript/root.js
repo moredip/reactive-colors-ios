@@ -1,7 +1,7 @@
 rxu.loaded( function(){
   console.log( "loaded root.js!" );
 
-  ['red-slider','blue-slider','green-slider','alpha-slider'].forEach( rxu.addTracingTo )
+  //['red-slider','blue-slider','green-slider','alpha-slider'].forEach( rxu.addTracingTo );
 
   var propertyStreams = {
     r: rxu.racSignal('red-slider').toProperty(1),
@@ -12,8 +12,15 @@ rxu.loaded( function(){
 
   var colorStream = Bacon.combineTemplate( propertyStreams ).map( window.tinycolor.fromRatio );
 
-  colorStream.onValue( function (tc){
-    console.log( "color: " + tc.toRgbString() );
+  var colorDictStream = colorStream.map( function(tc){
+    var rgb = tc.toRgb();
+    return {
+      r: (rgb.r / 255),
+      g: (rgb.g / 255),
+      b: (rgb.b / 255),
+      a: rgb.a
+    };
   });
-  
+
+  rxu.wireStreamToSink( "color-dict", colorDictStream );
 });

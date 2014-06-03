@@ -15,5 +15,6 @@
 - (void)bootJavascript;
 
 - (void)registerSignal:(RACSignal *)signal named:(NSString *)name;
+- (RACSignal *)signalNamed:(NSString *)signalName;
 
 @end

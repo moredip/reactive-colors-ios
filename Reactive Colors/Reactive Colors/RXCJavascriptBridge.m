@@ -10,6 +10,7 @@
 
 #import <JavaScriptCore/JavaScriptCore.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 
 @interface RXCJavascriptBridge()
 @property (strong) JSContext *jsContext;
@@ -35,6 +36,30 @@
     [signal subscribeNext:^(id val) {
         [jsSignalHandler callWithArguments:@[name,val]];
     }];
+}
+
+- (RACSignal *)signalNamed:(NSString *)signalName
+{
+    @weakify(self);
+    
+    return [RACSignal
+             createSignal:^(id<RACSubscriber> subscriber) {
+                 @strongify(self);
+                 
+                 JSValue *jsSignalHandler = ^(JSValue *value) {
+                     [subscriber sendNext:[value toObject]];
+                 };
+                 [self.jsContext[@"rxu"][@"registerSinkSignalHandler"] callWithArguments:@[signalName,jsSignalHandler]];
+                 
+                 [self.rac_deallocDisposable addDisposable:[RACDisposable disposableWithBlock:^{
+                     [subscriber sendCompleted];
+                 }]];
+                 
+                 return [RACDisposable disposableWithBlock:^{
+                     //@strongify(self);
+                     // TODO: remove js function from rxu.sinkSignalHandlers ?
+                 }];
+             }];
 }
 
 - (JSContext *)enhancedJSContext
