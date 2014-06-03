@@ -39,14 +39,10 @@
 {
     [super viewDidLoad];
     
-    [self wireUpToJavascript];
-    
-    //RACSignal *alphaSignal = [self.alphaSlider rac_newValueChannelWithNilValue:nil];
-
-    //RAC(self.rgbContainerView,alpha) = alphaSignal;
+    [self wireUpReactiveUnion];
 }
 
-- (void)wireUpToJavascript
+- (void)wireUpReactiveUnion
 {
     [self.js registerSignal:[self.redSlider rac_newValueChannelWithNilValue:nil] named:@"red-slider"];
     [self.js registerSignal:[self.greenSlider rac_newValueChannelWithNilValue:nil] named:@"green-slider"];
@@ -60,23 +56,8 @@
                                    alpha:[(NSNumber *)rgba[@"a"] floatValue]];
         }];
     
-    [color logAll];
     
     RAC(self.rgbContainerView,backgroundColor) = color;
-    
-    [color subscribeNext:^(id value) {
-        NSLog(@"COLORRRRRRR: %@", value);
-        self.rgbContainerView.backgroundColor = (UIColor *)value;
-    }];
-    
-    
-//    RAC(self.rgbContainerView,alpha) = [self.js signalNamed:@"alpha-channel"];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
