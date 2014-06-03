@@ -107,6 +107,7 @@
         NSLog(@"loading coffescript from %@",coffeePath);
         NSString *coffeescript = [NSString stringWithContentsOfFile:coffeePath encoding:NSUTF8StringEncoding error:nil];
         NSString *compiledJavascript = [[coffeescriptCompiler callWithArguments:@[coffeescript]] toString];
+        // TODO: check for null javascript - indicates coffescript syntax error
         [self.jsContext evaluateScript:compiledJavascript];
     }
     

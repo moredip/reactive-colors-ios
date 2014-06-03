@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UISlider *blueSlider;
 @property (weak, nonatomic) IBOutlet UISlider *alphaSlider;
 @property (weak, nonatomic) IBOutlet UIView *rgbContainerView;
+@property (weak, nonatomic) IBOutlet UILabel *redLabel;
+@property (weak, nonatomic) IBOutlet UILabel *greenLabel;
+@property (weak, nonatomic) IBOutlet UILabel *blueLabel;
 
 @property (strong) RXCJavascriptBridge *js;
 
@@ -48,6 +51,10 @@
     [self.js registerSignal:[self.greenSlider rac_newValueChannelWithNilValue:nil] named:@"green-slider"];
     [self.js registerSignal:[self.blueSlider rac_newValueChannelWithNilValue:nil] named:@"blue-slider"];
     [self.js registerSignal:[self.alphaSlider rac_newValueChannelWithNilValue:nil] named:@"alpha-slider"];
+    
+    RAC(self.redLabel,text) = [self.js signalNamed:@"red-label"];
+    RAC(self.greenLabel,text) = [self.js signalNamed:@"green-label"];
+    RAC(self.blueLabel,text) = [self.js signalNamed:@"blue-label"];
     
     RACSignal *color = [[self.js signalNamed:@"color-dict"] map:^id(NSDictionary *rgba) {
             return [UIColor colorWithRed:[(NSNumber *)rgba[@"r"] floatValue]

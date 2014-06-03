@@ -1,3 +1,6 @@
+
+console.log( "bootin'" )
+
 rxu.loaded ->
   #['red-slider','blue-slider','green-slider','alpha-slider'].forEach( rxu.addTracingTo )
 
@@ -10,7 +13,7 @@ rxu.loaded ->
 
   colorStream = Bacon.combineTemplate( propertyStreams ).map( window.tinycolor.fromRatio )
 
-  colorDictStream = colorStream.map (tc)->
+  rgbRatios = colorStream.map (tc)->
     rgb = tc.toRgb()
     {
       r: (rgb.r / 255)
@@ -19,4 +22,11 @@ rxu.loaded ->
       a: rgb.a
     }
 
-  rxu.wireStreamToSink( "color-dict", colorDictStream )
+  rxu.wireStreamToSink( "color-dict", rgbRatios )
+
+  colorToPercentage = (color,component)->
+    "#{color.toPercentageRgb()[component]}%"
+
+  rxu.wireStreamToSink( "red-label", colorStream.map( (color)-> color.toPercentageRgb().r ) )
+  rxu.wireStreamToSink( "green-label", colorStream.map( (color)-> color.toPercentageRgb().g ) )
+  rxu.wireStreamToSink( "blue-label", colorStream.map( (color)-> color.toPercentageRgb().b ) )
